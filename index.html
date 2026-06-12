@@ -59,6 +59,9 @@ nav.open .nav-mobile-btn span{background:var(--org);}
 .hero-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--org);margin-bottom:20px;animation:heroUp .7s var(--ease-out) .1s both;}
 h1.hero-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(60px,8vw,108px);font-weight:900;letter-spacing:4px;text-transform:uppercase;color:var(--wht);line-height:1;margin-bottom:4px;animation:heroUp .7s var(--ease-out) .18s both;}
 .hero-title-sub{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,3.5vw,48px);font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gray);line-height:1;animation:heroUp .7s var(--ease-out) .24s both;}
+/* typed text override — JS controls these when data-type present */
+h1.hero-title[data-type]{animation:none;opacity:0;transform:none;}
+.hero-title-sub[data-type]{animation:none;opacity:0;transform:none;}
 .hero-rule{width:56px;height:3px;background:var(--org);margin:32px 0;animation:heroUp .7s var(--ease-out) .3s both;}
 .hero-tagline{font-size:16px;font-weight:300;color:var(--cream);max-width:500px;line-height:1.8;margin-bottom:40px;animation:heroUp .7s var(--ease-out) .36s both;}
 .hero-meta{display:flex;gap:40px;border-top:1px solid rgba(255,255,255,.1);padding-top:28px;flex-wrap:wrap;animation:heroUp .7s var(--ease-out) .44s both;}
@@ -110,7 +113,9 @@ section{border-bottom:1px solid var(--steel);}
 .cap-card:hover{transform:translateY(-4px);}
 .cap-img-wrap{width:100%;aspect-ratio:4/3;overflow:hidden;position:relative;}
 .cap-img-wrap img{width:100%;height:100%;object-fit:cover;filter:brightness(.52) saturate(.45);transition:filter .45s,transform .5s;display:block;}
-.cap-card:hover .cap-img-wrap img{filter:brightness(.65) saturate(.6);transform:scale(1.04);}
+.cap-card:hover .cap-img-wrap img{filter:brightness(.72) saturate(.65);transform:scale(1.08);}
+.cap-img-wrap::after{content:'';position:absolute;inset:0;border:1px solid rgba(232,74,42,0);transition:border-color .35s;pointer-events:none;z-index:1;}
+.cap-card:hover .cap-img-wrap::after{border-color:rgba(232,74,42,.3);}
 .cap-img-label{position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(to top,rgba(10,10,10,.88),transparent);font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--org);}
 .cap-body-wrap{padding:28px 28px 32px;}
 .cap-num{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--org);margin-bottom:10px;}
@@ -125,7 +130,9 @@ section{border-bottom:1px solid var(--steel);}
 .projects-grid-bottom{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--steel);border:1px solid var(--steel);border-top:none;}
 .proj-card{position:relative;overflow:hidden;background:var(--blk);}
 .proj-card img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.48) saturate(.4);transition:filter .45s,transform .55s;}
-.proj-card:hover img{filter:brightness(.65) saturate(.55);transform:scale(1.05);}
+.proj-card:hover img{filter:brightness(.7) saturate(.58);transform:scale(1.08);}
+.proj-card::after{content:'';position:absolute;inset:0;border:1px solid rgba(232,74,42,0);transition:border-color .35s;z-index:2;pointer-events:none;}
+.proj-card:hover::after{border-color:rgba(232,74,42,.28);}
 .proj-card-tall{aspect-ratio:3/4;}
 .proj-card-wide{aspect-ratio:16/9;}
 .proj-label{position:absolute;bottom:0;left:0;right:0;padding:24px 20px 18px;background:linear-gradient(to top,rgba(10,10,10,.9) 0%,transparent 100%);}
@@ -229,8 +236,8 @@ footer{background:var(--blk);padding:28px 80px;display:flex;align-items:center;j
   <div class="hero-inner">
     <div class="hero-text">
       <div class="hero-eyebrow">C4ISR · UAS · Field Operations</div>
-      <h1 class="hero-title">Mission-Ready.</h1>
-      <div class="hero-title-sub">Field-Proven Execution.</div>
+      <h1 class="hero-title" data-type="MISSION-READY."></h1>
+      <div class="hero-title-sub" data-type="FIELD-PROVEN EXECUTION."></div>
       <div class="hero-rule"></div>
       <p class="hero-tagline">Defence and security technology advisory across Africa, the Middle East, and Asia. We assess, specify, and deploy — on the ground, under pressure.</p>
       <div class="hero-meta">
