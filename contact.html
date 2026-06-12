@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Animo Precision Solutions</title>
+<meta name="description" content="Get in touch with Animo Precision Solutions. Available on WhatsApp, Signal, and Telegram. Responds within 24 hours.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="alternate icon" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --blk:#0A0A0A; --dark:#111111; --char:#1C1C1C;
+  --steel:#2A2A2A; --steel-lt:#3A3A3A;
+  --org:#E84A2A; --wht:#F4F0EB; --cream:#E8E2DA;
+  --gray:#8A8578; --gray-mid:#555048; --page-bg:#0D0D0D;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--page-bg);font-family:'Barlow',sans-serif;color:var(--wht);font-size:14px;line-height:1.6;overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;height:52px;background:rgba(10,10,10,0.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--steel);display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:9999;}
+.nav-mark{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-wordmark{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;letter-spacing:5px;text-transform:uppercase;color:var(--wht);}
+.nav-wordmark span{color:var(--org);}
+.nav-links{display:flex;gap:0;list-style:none;}
+.nav-links a{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gray);text-decoration:none;padding:0 14px;border-right:1px solid var(--steel);line-height:52px;transition:color 0.2s;}
+.nav-links li:first-child a{border-left:1px solid var(--steel);}
+.nav-links a:hover,.nav-links a.active{color:var(--org);}
+.nav-cta{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--org);text-decoration:none;padding:8px 18px;border:1px solid var(--org);border-radius:2px;transition:background 0.2s,color 0.2s;}
+.nav-cta:hover{background:var(--org);color:var(--wht);}
+.nav-mobile-btn{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px;}
+.nav-mobile-btn span{display:block;width:22px;height:1px;background:var(--gray);}
+
+/* PAGE HERO */
+.page-hero{padding:120px 80px 72px;border-bottom:1px solid var(--steel);background:var(--blk);position:relative;}
+.page-hero-inner{max-width:1200px;margin:0 auto;}
+.page-hero-back{display:inline-flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gray);text-decoration:none;margin-bottom:28px;transition:color 0.2s;}
+.page-hero-back:hover{color:var(--org);}
+.page-hero-back::before{content:'←';font-size:12px;}
+.page-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--org);margin-bottom:20px;}
+.page-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(48px,7vw,88px);font-weight:900;letter-spacing:3px;text-transform:uppercase;color:var(--wht);line-height:1;margin-bottom:0;}
+.page-rule{width:56px;height:3px;background:var(--org);margin:28px 0;}
+.page-tagline{font-size:16px;font-weight:300;color:var(--cream);max-width:520px;line-height:1.8;}
+
+/* SECURE CHANNELS */
+#channels{border-bottom:1px solid var(--steel);background:var(--char);}
+.channels-inner{max-width:1200px;margin:0 auto;padding:56px 80px;}
+.channels-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--org);margin-bottom:8px;display:flex;align-items:center;gap:10px;}
+.channels-label::after{content:'';flex:1;height:1px;background:var(--steel);}
+.channels-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(20px,3vw,28px);font-weight:900;letter-spacing:2px;text-transform:uppercase;color:var(--wht);margin-bottom:8px;}
+.channels-sub{font-size:13px;font-weight:300;color:var(--gray);margin-bottom:36px;max-width:480px;line-height:1.75;}
+.channels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.channel-card{
+  display:flex;flex-direction:column;align-items:flex-start;
+  background:var(--blk);border:1px solid var(--steel);border-radius:2px;
+  padding:28px 28px 24px;
+  text-decoration:none;
+  transition:border-color 0.2s,background 0.2s;
+  cursor:pointer;
+}
+.channel-card:hover{border-color:var(--steel-lt);background:rgba(255,255,255,0.02);}
+.channel-card.whatsapp:hover{border-color:rgba(37,211,102,0.4);}
+.channel-card.signal:hover{border-color:rgba(58,135,254,0.4);}
+.channel-card.telegram:hover{border-color:rgba(40,160,240,0.4);}
+.channel-icon{width:40px;height:40px;border-radius:10px;margin-bottom:18px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.channel-icon.wa{background:#25D366;}
+.channel-icon.sig{background:#3A87FE;}
+.channel-icon.tg{background:#28A0F0;}
+.channel-name{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:var(--wht);margin-bottom:4px;}
+.channel-handle{font-size:12px;color:var(--gray);margin-bottom:12px;letter-spacing:0.3px;}
+.channel-desc{font-size:12px;font-weight:300;color:var(--gray);line-height:1.7;flex:1;}
+.channel-action{margin-top:20px;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--org);display:flex;align-items:center;gap:6px;}
+.channel-action::after{content:'→';}
+
+/* SECURE NOTE */
+.secure-note{
+  display:flex;align-items:flex-start;gap:12px;
+  background:rgba(232,74,42,0.04);
+  border:1px solid rgba(232,74,42,0.15);
+  border-radius:2px;
+  padding:16px 20px;
+  margin-top:24px;
+}
+.secure-note-icon{flex-shrink:0;margin-top:1px;}
+.secure-note-text{font-size:12px;font-weight:300;color:var(--gray);line-height:1.7;}
+.secure-note-text strong{color:var(--cream);font-weight:500;}
+
+/* CONTACT FORM + INFO */
+#contact-form-section{border-bottom:1px solid var(--steel);}
+.contact-main{max-width:1200px;margin:0 auto;padding:80px;display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:start;}
+
+/* FORM */
+.form-wrap{}
+.form-heading{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:var(--wht);margin-bottom:6px;}
+.form-sub{font-size:13px;font-weight:300;color:var(--gray);line-height:1.75;margin-bottom:36px;max-width:460px;}
+form{display:flex;flex-direction:column;gap:16px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.field-group{display:flex;flex-direction:column;gap:6px;}
+label{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--org);}
+input,select,textarea{
+  background:var(--char);
+  border:1px solid var(--steel);
+  border-radius:2px;
+  color:var(--wht);
+  font-family:'Barlow',sans-serif;
+  font-size:13px;
+  font-weight:300;
+  padding:12px 14px;
+  outline:none;
+  transition:border-color 0.2s;
+  width:100%;
+  -webkit-appearance:none;
+  appearance:none;
+}
+input::placeholder,textarea::placeholder{color:var(--gray-mid);}
+input:focus,select:focus,textarea:focus{border-color:var(--org);}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238A8578' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;cursor:pointer;}
+select option{background:var(--char);color:var(--wht);}
+textarea{resize:vertical;min-height:140px;line-height:1.6;}
+.form-footer-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.form-privacy{font-size:11px;font-weight:300;color:var(--gray-mid);line-height:1.6;max-width:300px;}
+.form-privacy a{color:var(--gray);text-decoration:none;}
+.submit-btn{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:13px;font-weight:900;letter-spacing:4px;text-transform:uppercase;
+  color:var(--wht);background:var(--org);
+  border:none;border-radius:2px;
+  padding:16px 36px;cursor:pointer;
+  transition:opacity 0.2s;white-space:nowrap;flex-shrink:0;
+}
+.submit-btn:hover{opacity:0.85;}
+.submit-btn:disabled{opacity:0.5;cursor:not-allowed;}
+
+/* Form states */
+.form-success{display:none;background:rgba(232,74,42,0.06);border:1px solid rgba(232,74,42,0.25);border-radius:2px;padding:28px;text-align:center;}
+.form-success.show{display:block;}
+.form-success-title{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:var(--wht);margin-bottom:8px;}
+.form-success-body{font-size:13px;font-weight:300;color:var(--gray);line-height:1.75;}
+.form-error-msg{display:none;font-size:12px;color:#E84A2A;margin-top:8px;}
+.form-error-msg.show{display:block;}
+
+/* CONTACT INFO SIDEBAR */
+.contact-info{}
+.info-block{padding:24px 0;border-bottom:1px solid var(--steel);}
+.info-block:first-child{border-top:1px solid var(--steel);}
+.info-label{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--org);margin-bottom:6px;}
+.info-value{font-size:13px;color:var(--cream);line-height:1.7;letter-spacing:0.3px;}
+.info-value a{color:var(--cream);text-decoration:none;transition:color 0.2s;}
+.info-value a:hover{color:var(--org);}
+.info-note{font-size:12px;font-weight:300;color:var(--gray);line-height:1.7;margin-top:20px;}
+
+/* FOOTER */
+footer{background:var(--blk);padding:28px 80px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--steel);}
+.footer-left{display:flex;align-items:center;gap:14px;}
+.footer-wordmark{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;letter-spacing:5px;text-transform:uppercase;color:var(--wht);}
+.footer-wordmark span{color:var(--org);}
+.footer-tag{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gray);}
+.footer-nav{display:flex;gap:0;list-style:none;}
+.footer-nav a{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gray);text-decoration:none;padding:0 14px;border-right:1px solid var(--steel);transition:color 0.2s;}
+.footer-nav li:first-child a{border-left:1px solid var(--steel);}
+.footer-nav a:hover{color:var(--org);}
+.footer-right{font-size:10px;color:var(--gray-mid);letter-spacing:0.3px;text-align:right;}
+
+/* PAGE FADE + REVEAL */
+body{animation:pageFade .35s ease;}
+@keyframes pageFade{from{opacity:0}to{opacity:1}}
+:root{--ease-out:cubic-bezier(.25,.46,.45,.94);}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .65s var(--ease-out),transform .65s var(--ease-out);}
+.reveal.visible{opacity:1;transform:none;}
+.reveal-d1{transition-delay:.09s;}.reveal-d2{transition-delay:.18s;}.reveal-d3{transition-delay:.27s;}
+.stagger>*{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease;}
+.stagger.visible>*{opacity:1;transform:none;}
+.stagger.visible>*:nth-child(1){transition-delay:.05s;}
+.stagger.visible>*:nth-child(2){transition-delay:.13s;}
+.stagger.visible>*:nth-child(3){transition-delay:.21s;}
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .page-hero,.channels-inner{padding-left:40px;padding-right:40px;}
+  .contact-main{padding:64px 40px;gap:48px;}
+  footer{padding:24px 40px;}nav{padding:0 24px;}
+}
+@media(max-width:860px){
+  .nav-links,.nav-cta{display:none;}.nav-mobile-btn{display:flex;}
+  nav.open .nav-links{display:flex;flex-direction:column;position:fixed;top:52px;left:0;right:0;background:var(--blk);padding:16px 0;gap:0;z-index:9998;border-bottom:1px solid var(--steel);}
+  nav.open .nav-links a{border:none;border-bottom:1px solid var(--steel);line-height:1;padding:16px 24px;font-size:13px;}
+  .page-hero{padding:100px 24px 56px;}
+  .channels-inner{padding:48px 24px;}
+  .channels-grid{grid-template-columns:1fr;}
+  .contact-main{padding:56px 24px;grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  footer{flex-direction:column;gap:16px;padding:24px;text-align:center;}.footer-nav{display:none;}.footer-right{text-align:center;}
+}
+@media(max-width:480px){
+  .form-footer-row{flex-direction:column;align-items:flex-start;}
+  .submit-btn{width:100%;}
+}
+</style>
+</head>
+<body>
+
+<nav id="main-nav">
+  <a href="index.html" class="nav-mark">
+    <svg width="22" height="26" viewBox="0 0 110 130" xmlns="http://www.w3.org/2000/svg"><polygon points="55,4 80,52 55,44 30,52" fill="#E84A2A"/><polygon points="55,44 55,90 45,68 30,52" fill="#7A1A08"/><polygon points="55,44 55,90 65,68 80,52" fill="#C03018"/><polygon points="48,82 55,90 62,82 55,78" fill="#E84A2A"/><polygon points="4,110 30,52 46,72 30,95" fill="#7A1A08"/><polygon points="106,110 80,52 64,72 80,95" fill="#C03018"/><polygon points="4,110 30,95 55,110 46,72" fill="#3D1005"/><polygon points="106,110 80,95 55,110 64,72" fill="#5A1A0A"/></svg>
+    <span class="nav-wordmark">ANIMO<span>.</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#capabilities">Capabilities</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#regions">Regions</a></li>
+    <li><a href="pre-deploy-advisory.html">Pre-Deploy Advisory</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <a href="mailto:deploy@animo-solutions.com" class="nav-cta">Deploy</a>
+  <button class="nav-mobile-btn" aria-label="Menu" onclick="document.getElementById('main-nav').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <a href="index.html" class="page-hero-back">Back to Animo</a>
+    <div class="page-eyebrow">Get In Touch</div>
+    <h1 class="page-title">Start A<br>Conversation.</h1>
+    <div class="page-rule"></div>
+    <p class="page-tagline">If you are evaluating UAS or C4ISR capability, planning a procurement, or dealing with a system that isn't performing as specified — we are worth talking to before you sign anything.</p>
+  </div>
+</div>
+
+<!-- SECURE CHANNELS -->
+<section id="channels">
+  <div class="channels-inner">
+    <div class="channels-label reveal">Secure Channels</div>
+    <h2 class="channels-title reveal reveal-d1">Available On Encrypted Messaging</h2>
+    <p class="channels-sub reveal reveal-d2">For clients in active theatre or sensitive procurement environments, our team is reachable directly on end-to-end encrypted platforms.</p>
+
+    <div class="channels-grid reveal stagger">
+
+      <!-- WhatsApp -->
+      <!-- OPSEC NOTE: Replace href number with Julian's confirmed public WhatsApp number before publishing -->
+      <a class="channel-card whatsapp" href="https://wa.me/27662319006?text=Hello%20Animo%20%E2%80%94%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer">
+        <div class="channel-icon wa">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.41A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" fill="white" fill-opacity="0.15" stroke="white" stroke-width="1.5"/>
+            <path d="M8.5 9.5c.2-.5.7-1.5 1.5-1.5.4 0 .7.2.9.5l1 2c.1.3 0 .6-.2.8l-.5.5c.3.6.8 1.2 1.4 1.7.6.5 1.2.9 1.8 1.1l.5-.5c.2-.2.5-.3.8-.2l2 .8c.4.1.6.5.5.9-.2.9-1.1 1.9-2 1.9-2.5 0-6.5-3.5-7-6C9 10.8 8.3 10 8.5 9.5z" fill="white"/>
+          </svg>
+        </div>
+        <div class="channel-name">WhatsApp</div>
+        <div class="channel-handle">Message directly</div>
+        <div class="channel-desc">Fastest response for initial enquiries. Our preferred channel for clients in the field or in early-stage discussions.</div>
+        <div class="channel-action">Open WhatsApp</div>
+      </a>
+
+      <!-- Signal -->
+      <!-- OPSEC NOTE: Replace href number with confirmed Signal number before publishing. Signal uses phone number as identifier. -->
+      <a class="channel-card signal" href="https://signal.me/#p/+27662319006" target="_blank" rel="noopener noreferrer">
+        <div class="channel-icon sig">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.5" fill="white" fill-opacity="0.1"/>
+            <path d="M12 7a5 5 0 100 10A5 5 0 0012 7z" fill="white"/>
+            <path d="M9 2.5L10.5 5M15 2.5L13.5 5M19.5 9L17 10.5M19.5 15L17 13.5M15 21.5L13.5 19M9 21.5L10.5 19M4.5 15L7 13.5M4.5 9L7 10.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="channel-name">Signal</div>
+        <div class="channel-handle">End-to-end encrypted</div>
+        <div class="channel-desc">Recommended for clients in sensitive procurement environments or where communication security is a priority.</div>
+        <div class="channel-action">Open Signal</div>
+      </a>
+
+      <!-- Telegram -->
+      <!-- OPSEC NOTE: Replace YOUR_TELEGRAM_USERNAME with Animo's actual Telegram username before publishing -->
+      <a class="channel-card telegram" href="https://t.me/AnimoPrecision" target="_blank" rel="noopener noreferrer">
+        <div class="channel-icon tg">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" fill="white" fill-opacity="0.1" stroke="white" stroke-width="1.5"/>
+            <path d="M6 11.5l10-4-3.5 10-2.5-3.5L6 11.5z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M10 14l1-3" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="channel-name">Telegram</div>
+        <div class="channel-handle">@AnimoPrecision</div>
+        <div class="channel-desc">Available for group briefings, document sharing, and ongoing project communication throughout an engagement.</div>
+        <div class="channel-action">Open Telegram</div>
+      </a>
+
+    </div>
+
+    <div class="secure-note">
+      <div class="secure-note-icon">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="10" height="8" rx="1" stroke="#E84A2A" stroke-width="1.2"/><path d="M5 7V5a3 3 0 016 0v2" stroke="#E84A2A" stroke-width="1.2" stroke-linecap="round"/><circle cx="8" cy="11" r="1" fill="#E84A2A"/></svg>
+      </div>
+      <div class="secure-note-text"><strong>All three channels support end-to-end encryption.</strong> For classified or commercially sensitive discussions, Signal is recommended. Our team does not forward or retain conversation logs outside of the platform used.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM + INFO -->
+<section id="contact-form-section">
+  <div class="contact-main">
+
+    <!-- FORM -->
+    <div class="form-wrap reveal">
+      <div class="form-heading">Send A Message</div>
+      <p class="form-sub">Use this form for formal enquiries, project scoping requests, or if you'd prefer not to use a messaging app. We respond to all submissions within 24 hours.</p>
+
+      <!--
+        SETUP INSTRUCTIONS — FORMSPREE
+        ─────────────────────────────────────────────────────────────
+        This form uses Formspree to deliver submissions to deploy@animo-solutions.com.
+        To activate it:
+          1. Go to https://formspree.io and sign up / log in.
+          2. Create a new form and set the email to: deploy@animo-solutions.com
+          3. Copy your unique form endpoint (looks like: https://formspree.io/f/xxxxxxxx)
+          4. Replace the action attribute below with your endpoint URL.
+        Formspree's free tier supports 50 submissions/month. Upgrade for more.
+        ─────────────────────────────────────────────────────────────
+      -->
+      <form id="contact-form" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST" novalidate>
+
+        <!-- Honeypot spam protection — hidden from real users -->
+        <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
+        <!-- Redirect after submission (Formspree will use this) -->
+        <input type="hidden" name="_next" value="">
+        <!-- Subject line in email inbox -->
+        <input type="hidden" name="_subject" value="New Enquiry — Animo Website">
+
+        <div class="form-row">
+          <div class="field-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+          </div>
+          <div class="field-group">
+            <label for="org">Organisation</label>
+            <input type="text" id="org" name="organisation" placeholder="Company / Unit / Agency" autocomplete="organization">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+          </div>
+          <div class="field-group">
+            <label for="country">Country / Region *</label>
+            <input type="text" id="country" name="country" placeholder="Where are you based?" required>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="enquiry-type">Enquiry Type *</label>
+          <select id="enquiry-type" name="enquiry_type" required>
+            <option value="" disabled selected>Select the nature of your enquiry</option>
+            <option value="pre-deploy-assessment">Pre-Deploy Assessment</option>
+            <option value="uas-deployment">UAS Deployment &amp; Selection</option>
+            <option value="c4isr-integration">C4ISR Integration</option>
+            <option value="field-operations">Field Operations Support</option>
+            <option value="training">Operator Training Programme</option>
+            <option value="procurement">Procurement Guidance</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" placeholder="Briefly describe your operational requirement, the environment you are working in, and any timeline considerations." required></textarea>
+        </div>
+
+        <div class="form-footer-row">
+          <p class="form-privacy">Your information is used only to respond to your enquiry. It is not shared with third parties or used for marketing purposes.</p>
+          <button type="submit" class="submit-btn" id="submit-btn">Send Enquiry</button>
+        </div>
+
+        <p class="form-error-msg" id="form-error">Something went wrong sending your message. Please try again or email us directly at <a href="mailto:deploy@animo-solutions.com" style="color:var(--org);">deploy@animo-solutions.com</a></p>
+      </form>
+
+      <div class="form-success" id="form-success">
+        <div class="form-success-title">Message Received</div>
+        <p class="form-success-body">Thank you for getting in touch. A member of our team will respond within 24 hours.<br><br>For urgent requirements, reach us directly on WhatsApp or Signal.</p>
+      </div>
+    </div>
+
+    <!-- CONTACT INFO SIDEBAR -->
+    <div class="contact-info reveal reveal-d2">
+      <div class="info-block">
+        <div class="info-label">General Enquiries</div>
+        <div class="info-value"><a href="mailto:deploy@animo-solutions.com">deploy@animo-solutions.com</a></div>
+      </div>
+      <div class="info-block">
+        <div class="info-label">Response Time</div>
+        <div class="info-value">Within 24 hours</div>
+      </div>
+      <div class="info-block">
+        <div class="info-label">Secure Channels</div>
+        <div class="info-value">WhatsApp · Signal · Telegram</div>
+      </div>
+      <p class="info-note">Animo operates across multiple time zones. If your enquiry is operationally time-sensitive, WhatsApp or Signal will reach us fastest. All channels are monitored daily.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-left">
+    <svg width="18" height="22" viewBox="0 0 110 130" xmlns="http://www.w3.org/2000/svg"><polygon points="55,4 80,52 55,44 30,52" fill="#E84A2A"/><polygon points="55,44 55,90 45,68 30,52" fill="#7A1A08"/><polygon points="55,44 55,90 65,68 80,52" fill="#C03018"/><polygon points="48,82 55,90 62,82 55,78" fill="#E84A2A"/><polygon points="4,110 30,52 46,72 30,95" fill="#7A1A08"/><polygon points="106,110 80,52 64,72 80,95" fill="#C03018"/><polygon points="4,110 30,95 55,110 46,72" fill="#3D1005"/><polygon points="106,110 80,95 55,110 64,72" fill="#5A1A0A"/></svg>
+    <span class="footer-wordmark">ANIMO<span>.</span></span>
+    <span class="footer-tag">Precision Solutions</span>
+  </div>
+  <ul class="footer-nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="pre-deploy-advisory.html">Pre-Deploy Advisory</a></li>
+  </ul>
+  <div class="footer-right">© 2026 Animo (Pty) Ltd<br>Mission-Ready. Field-Proven Execution.</div>
+</footer>
+
+<script src="js/animo.js" defer></script>
+<script>
+// Mobile nav
+document.querySelectorAll('.nav-links a').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('main-nav').classList.remove('open');});
+});
+
+// Form submission via fetch (Formspree AJAX)
+var form = document.getElementById('contact-form');
+var successEl = document.getElementById('form-success');
+var errorEl = document.getElementById('form-error');
+var submitBtn = document.getElementById('submit-btn');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  // Basic client-side validation
+  var name = document.getElementById('name').value.trim();
+  var email = document.getElementById('email').value.trim();
+  var country = document.getElementById('country').value.trim();
+  var enquiry = document.getElementById('enquiry-type').value;
+  var message = document.getElementById('message').value.trim();
+
+  if (!name || !email || !country || !enquiry || !message) {
+    errorEl.textContent = 'Please fill in all required fields.';
+    errorEl.classList.add('show');
+    return;
+  }
+
+  // Basic email format check
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    errorEl.textContent = 'Please enter a valid email address.';
+    errorEl.classList.add('show');
+    return;
+  }
+
+  errorEl.classList.remove('show');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending…';
+
+  var data = new FormData(form);
+
+  fetch(form.action, {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(function(response) {
+    if (response.ok) {
+      form.style.display = 'none';
+      successEl.classList.add('show');
+    } else {
+      return response.json().then(function(data) {
+        throw new Error(data.error || 'Submission failed');
+      });
+    }
+  })
+  .catch(function() {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send Enquiry';
+    errorEl.textContent = 'Something went wrong. Please email us directly at deploy@animo-solutions.com';
+    errorEl.classList.add('show');
+  });
+});
+</script>
+</body>
+</html>
