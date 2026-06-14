@@ -131,7 +131,7 @@
     if (!heroBg) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     window.addEventListener('scroll', function () {
-      heroBg.style.backgroundPositionY = 'calc(40% + ' + (window.scrollY * 0.2) + 'px)';
+      heroBg.style.backgroundPositionY = 'calc(5% + ' + (window.scrollY * 0.45) + 'px)';
     }, { passive: true });
   }
 
