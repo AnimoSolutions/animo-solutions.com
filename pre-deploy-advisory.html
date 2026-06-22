@@ -123,6 +123,13 @@ section{border-bottom:1px solid var(--steel);}
 .archetype-body{font-size:12.5px;color:var(--cream);line-height:1.75;margin-bottom:18px;}
 .archetype-fix-label{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gray);margin-bottom:8px;}
 .archetype-fix{font-size:12.5px;color:var(--wht);line-height:1.75;}
+.archetype-figure.text{font-size:22px;letter-spacing:0.5px;}
+.archetype-toggle{display:inline-flex;align-items:center;gap:8px;background:none;border:none;padding:0;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--org);cursor:pointer;}
+.archetype-toggle-arrow{transition:transform .25s ease;}
+.archetype-toggle[aria-expanded="true"] .archetype-toggle-arrow{transform:rotate(90deg);}
+.archetype-full{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+.archetype-full p{font-size:12.5px;color:var(--cream);line-height:1.75;margin-top:16px;}
+.archetype-full p:first-child{margin-top:18px;}
 
 /* INVESTMENT CTA */
 .invest-strip{
@@ -345,33 +352,48 @@ body{animation:pageFade .35s ease;}
 <!-- WHAT IT PREVENTS -->
 <section id="prevents">
   <div class="inner">
-    <div class="section-label reveal">04 — What This Prevents</div>
-    <h2 class="section-title reveal reveal-d1">This Happens More Than Anyone Admits</h2>
-    <p class="section-intro reveal reveal-d2">The following are illustrative composites — not specific clients or contracts — built from patterns seen repeatedly across UAS and C4ISR procurement in remote operating environments.</p>
-    <span class="illustrative-tag reveal reveal-d3">Illustrative Scenarios</span>
+    <div class="section-label reveal">04 — Field Outcomes</div>
+    <h2 class="section-title reveal reveal-d1">Field-Verified Outcomes</h2>
+    <p class="section-intro reveal reveal-d2">Three real engagements, anonymised to protect client identity — not illustrative composites.</p>
+    <span class="illustrative-tag reveal reveal-d3">Verified Field Outcomes</span>
     <div class="archetype-grid reveal stagger">
       <div class="archetype">
         <div class="archetype-top">
-          <div class="archetype-figure">$2.3M</div>
-          <div class="archetype-body">A mining security operation purchased a fixed-wing UAS fleet rated for temperate climates. Within three months, dust ingress and thermal cycling had grounded 60% of the fleet — with no regional OEM support and a six-week parts lead time.</div>
-          <div class="archetype-fix-label">What a Pre-Deployment Assessment changes</div>
-          <div class="archetype-fix">Flags the thermal limitations before purchase and redirects the budget toward a ruggedised platform with regional OEM backing.</div>
+          <div class="archetype-figure">$20M</div>
+          <div class="archetype-body">While supporting a UAV operation, our team found twelve aircraft — a $20M contract — sitting idle in the same hangar. A five-minute technical conversation revealed the fleet had never met its environmental and operational requirements, and had never entered service. The aircraft had been delivered; the capability had not.</div>
+          <button type="button" class="archetype-toggle" aria-expanded="false">Read Full Case Study <span class="archetype-toggle-arrow">→</span></button>
+          <div class="archetype-full">
+            <p>While operating a mission-proven UAV platform, our team noticed twelve aircraft sitting idle in the same hangar — representing a $20M contract.</p>
+            <p>A brief technical discussion with the on-site team surfaced concerns about environmental suitability and operational requirements. The fleet had never successfully entered service.</p>
+            <p>The aircraft had been delivered. The capability had not.</p>
+            <p>This is the cost of getting requirements wrong. An independent technical assessment is measured in thousands. Discovering the same oversights after delivery is measured in millions.</p>
+          </div>
         </div>
       </div>
       <div class="archetype">
         <div class="archetype-top">
-          <div class="archetype-figure">$850K</div>
-          <div class="archetype-body">A Ministry of Defence unit procured long-range UAVs marketed as "GPS-denied capable." In the field, EW conditions degraded the navigation solution to the point that operators reverted to manual flight — eliminating the autonomy the budget was spent on.</div>
-          <div class="archetype-fix-label">What a Pre-Deployment Assessment changes</div>
-          <div class="archetype-fix">Tests claimed EW resilience against the unit's actual threat environment before procurement — not after deployment.</div>
+          <div class="archetype-figure">$5M</div>
+          <div class="archetype-body">Acting as Field Service Representative, our team was asked to weigh in on a $5M intelligence-gathering UAV purchase nearing final approval. A specifications review surfaced maintenance, sustainment, and long-term support requirements the platform couldn't meet in the client's operating environment. We advised against the acquisition — helping the client avoid committing significant resources to a platform carrying substantial long-term sustainment risk.</div>
+          <button type="button" class="archetype-toggle" aria-expanded="false">Read Full Case Study <span class="archetype-toggle-arrow">→</span></button>
+          <div class="archetype-full">
+            <p>While supporting a client under a Field Service Representative (FSR) contract, our team was asked for a quick opinion on a proposed $5M intelligence-gathering UAV purchase nearing the final stage of procurement.</p>
+            <p>A review of the aircraft's specifications surfaced concerns beyond performance figures — maintenance requirements, sustainment demands, and long-term support considerations that raised real questions about whether the platform could be effectively operated within the client's environment and available resources.</p>
+            <p>We advised against proceeding with the acquisition in its current form.</p>
+            <p>By evaluating the system through a lifecycle and operational lens — not just a capability lens — the client avoided committing significant resources to a platform carrying substantial long-term sustainment risk.</p>
+          </div>
         </div>
       </div>
       <div class="archetype">
         <div class="archetype-top">
-          <div class="archetype-figure">$410K</div>
-          <div class="archetype-body">A remote field operation acquired a C4ISR integration package requiring four trained operators per shift. The site had one. The system sat in storage for five months awaiting a training contract that was never budgeted.</div>
-          <div class="archetype-fix-label">What a Pre-Deployment Assessment changes</div>
-          <div class="archetype-fix">Assesses staff readiness alongside equipment — and prices training into the roll-out plan from day one.</div>
+          <div class="archetype-figure text">Built To Last</div>
+          <div class="archetype-body">A remote ISR unit came to us with an ambitious mission and a limited budget. We supported the program from requirements definition through procurement — evaluating options, guiding acquisition decisions, and running Factory Acceptance Testing before deployment. The unit walked away with a fit-for-purpose ISR program, trained personnel, and a capability that continues to expand today.</div>
+          <button type="button" class="archetype-toggle" aria-expanded="false">Read Full Case Study <span class="archetype-toggle-arrow">→</span></button>
+          <div class="archetype-full">
+            <p>A remote ISR unit approached us with an ambitious mission and a limited budget. We worked closely with the client to maximise operational capability within their financial constraints.</p>
+            <p>Our team supported the program from requirements definition through procurement — helping evaluate options, guide acquisition decisions, and conduct Factory Acceptance Testing (FAT) to confirm systems met expectations before deployment.</p>
+            <p>The result was not just a successful acquisition, but a sustainable capability. The unit was left with a fit-for-purpose ISR program, trained personnel, and a foundation for future growth.</p>
+            <p>Today, the capability continues to expand — proof that effective outcomes are driven by informed decisions and sound planning, not simply larger budgets.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -418,5 +440,18 @@ body{animation:pageFade .35s ease;}
 </footer>
 
 <script src="js/animo.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.archetype-toggle').forEach(function (btn) {
+    var full = btn.nextElementSibling;
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      full.style.maxHeight = expanded ? '0px' : full.scrollHeight + 'px';
+      btn.firstChild.textContent = expanded ? 'Read Full Case Study ' : 'Show Less ';
+    });
+  });
+});
+</script>
 </body>
 </html>
